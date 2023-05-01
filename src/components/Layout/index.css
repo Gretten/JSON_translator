@@ -1,0 +1,21 @@
+.main {
+  height: 97vh;
+  width: 100%;
+  background-color: rgb(201, 252, 201);
+}
+
+.content {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.column {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.centralColumn {
+  margin: 0 10px;
+}

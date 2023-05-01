@@ -1,0 +1,18 @@
+.textField {
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  box-sizing: border-box;
+  resize: none;
+  display: block;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  padding: 5px;
+  color: rgb(139, 123, 123);
+}
+
+.textareaContainer {
+  height: 100%;
+}
