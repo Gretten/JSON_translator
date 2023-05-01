@@ -1,24 +1,33 @@
-export type ChangeInputValue = (
-  value: string,
-  inputValueSetter: React.Dispatch<React.SetStateAction<string>>
-) => void;
+
+import {
+  ChangeInputValue,
+  SetResult,
+  OnClickHandler,
+  ClearAllTextFields,
+} from "./types";
 
 export const changeInputValue: ChangeInputValue = (value, inputValueSetter) => {
   inputValueSetter(value || "");
 };
 
-export const setResult = (result, resultSetter) => {
+export const setResult: SetResult = (result, resultSetter) => {
   resultSetter(result);
 };
 
-export const onClickHandler = (input, resultSetter) => {
+export const onClickHandler: OnClickHandler = (input, resultSetter) => {
   const twinQuotesReplaced = input.replaceAll(/"/gi, "'");
   const keysSecondQuotesDeleted = twinQuotesReplaced.replaceAll(/':/gi, ":");
-  const keysFirstQuotesDeleted = keysSecondQuotesDeleted.replaceAll(/  '/gi, "  ");
+  const keysFirstQuotesDeleted = keysSecondQuotesDeleted.replaceAll(
+    /  '/gi,
+    "  "
+  );
   resultSetter(keysFirstQuotesDeleted);
 };
 
-export const clearAllTextFields = (inputSetter, resultSetter) => {
+export const clearAllTextFields: ClearAllTextFields = (
+  inputSetter,
+  resultSetter
+) => {
   inputSetter("");
   resultSetter("");
 };
